@@ -1,0 +1,25 @@
+<h1> {{ title | uppercase  }} </h1>
+
+<h1> {{ d }} </h1>
+
+<h1> {{ myvalue }} </h1>
+
+<h1> {{ d | date : 'shortDate'}} </h1>
+
+<h1> {{ d | date : 'longDate'}} </h1>
+
+<h1> {{ d | date :' MM/dd/yy' }} </h1>
+
+<h1> {{ d | date : 'MM/dd/yyyy' }} </h1>
+
+<h1> {{ spi | number : '2.2-3' }} </h1>
+
+<h3> {{ stuData | json }} </h3>
+<h3>Name: {{ stuData.Name }} </h3>
+<h3>Sem: {{ stuData.Sem }} </h3>
+<h3>Enrollment: {{ stuData.Enrollment }} </h3>
+
+<button [disabled] = 'isClickable'>Click</button>
+<br><br>
+<input type="text" (input) = "displayDetail($event)">
+<h3> {{ inputvalue }} </h3>

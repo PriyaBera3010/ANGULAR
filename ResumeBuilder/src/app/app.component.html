@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-6">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control"
+       (input)="datafill($event)" name="surname" placeholder="Surname" 
+       aria-describedby="basic-addonl">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control"
+       (input)="datafill($event)" name="username" placeholder="Username" 
+       aria-describedby="basic-addonl">
+    </div>
+
+    <h1>Project Section</h1>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Project Title"
+       aria-describedby="basic-addonl" (input)="makeProj($event)" name="proj">
+      <button class="btn btn-primary" (click)="addProject()">Submit</button>
+    </div>
+  </div>
+  <div class="col-6">
+    <h1>Surname : {{ stu.surname }}</h1>
+    <h1>Username : {{ stu.username }}</h1>
+    <div *ngFor = "let proj of stu.projects">
+      <h2>Project Name : {{ proj.proj  }}</h2>
+    </div>
+  </div>
+</div>
